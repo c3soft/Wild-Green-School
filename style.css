@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    text-align: center;
+    font-size: 3em;
+    color: #24a713;
+    font-family: 'Righteous', cursive;
+}
+aside{
+    width: 100%;
+    /* border: 1px solid #222; */
+    /* border-top: #222; */
+    background-color: #fff;
+    /* border-bottom: #222; */
+    /* background-image: linear-gradient(to bottom, #24a713, #00c6a1, #25d9f3, #c1e7ff, #ffffff); */
+    background: linear-gradient(#24a713, #ffffff);
+
+
+}
+ul{
+    list-style-type: none;
+}
+ul li{
+    display: inline-block;
+    
+}
+ul:nth-child(1){
+    background-color: #000000;
+}
