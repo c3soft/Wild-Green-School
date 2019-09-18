@@ -1,41 +1,73 @@
 body{
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Righteous', cursive;
+    color: #4d4a4a;
 }
+
+
+/* ***************************** HEADER ****************************** */
 header{
     position: fixed;
     width: 100%;
     background: linear-gradient(#24a713, #ffffff);
-
+    margin-bottom: 0;
 }
 .container-header{
     display: flex;
     flex-wrap: wrap; 
+    align-items: center;
     height: 100px;
 }
 header h1{
+    align-items: center;
     margin: 0 auto;;
     font-size: 3em;
-    color: #24a713;
-    font-family: 'Righteous', cursive;
+    color: #105807;
+    
 }
 
 aside{
     display: flex;
-    width: 100%;
+    /* width: 100%; */
     box-shadow: 0px 8px 8px -3px rgba(0,0,0,0.75);
 }
 aside a{
     text-decoration: none;
 
 }
+.navChapitre{
+    width: 50%;
+}
+.navChapitre h2{
+    text-align: center;
+}
+.navChapitre h2 a{
+    color: #4d4a4a;
+    font-size: 1.5em;
+}
 ul{
     list-style-type: none;
+    text-align: center;
+
 }
 ul li{
     display: inline-block;
-    
+    margin: 1em;
+    font-size: 1.4em;
 }
-ul:nth-child(1){
-    background-color: #000000;
+ul li:hover{
+    border-top: 4px solid#105807;
+    transition: 0.2s;
+    /*border-radius: 5ps;
+    *//*color:#f5f1f1;
+    */cursor: pointer;
+
+}
+
+/* ***************************** HOME IMAGE ****************************** */
+.fleurs{
+    margin-top: 100px;
 }
