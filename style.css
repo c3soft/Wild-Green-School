@@ -5,37 +5,90 @@ body{
     flex-direction: column;
     font-family: 'Righteous', cursive;
     color: #4d4a4a;
+    background-color: #4ee620;
+    width: 75%;
+    padding-left: 25%;
+    
+  
+    
 }
 
 
 /* ***************************** HEADER ****************************** */
 header{
-    position: fixed;
+    display:flex;
+    flex-direction:column;
     width: 100%;
-    background: linear-gradient(#24a713, #ffffff);
-    margin-bottom: 0;
+    margin-left: -15rem;
+
 }
+
+
 .container-header{
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap:wrap;
     align-items: center;
-    height: 100px;
+    height: 15rem;
+    width:100%;
+    position:fixed;
+    background: linear-gradient(#d4a508, #4ee620);
+    box-shadow: 1em 1em rgb(1, 44, 8)
 }
 header h1{
-    align-items: center;
-    margin: 0 auto;;
-    font-size: 3em;
+    justify-content:center;
+    texte-align: center;
+    font-size: 5em;
     color: #105807;
-    
+    margin-left: 9rem; 
+    text-shadow: 0.1em 0.1em rgb(1, 44, 8);
 }
 
 aside{
-    display: flex;
-    /* width: 100%; */
-    box-shadow: 0px 8px 8px -3px rgba(0,0,0,0.75);
+    width: 14rem;
+    text-align: center;
+    padding-left: px;
+    border:3px solid black;
+    align-items:flex-start;
+    margin-top:15em;
+    position: fixed;
+    background-color: #4ee620;
+    box-shadow: 0.5em 1em rgb(1, 44, 8);
+    border-radius: 0% 0% 20% 20%;
 }
-aside a{
-    text-decoration: none;
+
+
+}
+
+aside ul{
+    display:flex;
+    flex-direction:column;
+    list-style:none;
+    text-align:center;
+    margin-left: 0;
+    padding: 0;
+
+    
+
+ }
+
+ ul li{
+     text-align: center;
+
+ }
+#logo{
+    width:14.5rem;
+}
+
+aside{
+    justify-content:left;
+    color:;
+   
+}
+#fleurs{
+    height:62rem;
+    width:62rem;
+}
+    
 
 }
 .navChapitre{
@@ -68,6 +121,5 @@ ul li:hover{
 }
 
 /* ***************************** HOME IMAGE ****************************** */
-.fleurs{
-    margin-top: 100px;
+
 }
