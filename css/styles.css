@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+}
+body, html{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 90%;
+    margin: auto;
+    position: relative;
+    z-index: 999;
+}
+.header{
+    height: 450px;
+    width: 100%;
+    background: rgb(94, 91, 91);
+    position: relative;
+}
+.header-mainImage{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../images/main-image.jpg")center no-repeat;
+    background-size: cover;
+    z-index: 1;
+    opacity: .6;
+}
+.header-mask{
+    position: absolute;
+    bottom: 0;
+    background: 0 0;
+    height: 42px;
+    width: 100%;
+    z-index: 10;
+}
+.header-navbar{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between; 
+    align-items: center;
+}
+.header-navbar-logoTitle{
+    color: #edf5fc;
+    font-size: 28px;
+    font-family: 'Saira Stencil One', cursive;
+}
+.header-navbar-menu a{
+    margin-left: 30px;
+    color:aliceblue;
+    text-decoration: none;
+}
+.header-slogan{
+    text-align: center;
+    margin-top: 3%;
+}
+.header-sloganSlogan{
+    color: #edf5fc;
+    font-size: 80px;
+    font-family: 'Anton', sans-serif;
+}
+.header-sloganBtn{
+    color: #edf5fc;
+    text-decoration: none;
+    padding: 15px 20px;
+    background: rgb(120, 224, 120);
+    border-radius: 5px;
+}
+.header-navbar-toggle{
+    width: 40px;
+    height: 60px;
+    display: flex;
+    text-align: center;
+    display: none;
+    cursor: pointer;
+
+}
+.header-navbar-toggleIcon, .header-navbar-toggleIcon:before, .header-navbar-toggleIcon:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    border-right: 5px;
+    background: #edf5fc;
+    position: relative;
+}
+.header-navbar-toggleIcon:before{top: 10px;}
+.header-navbar-toggleIcon:after{top: -14px;}
+
+@media screen and (max-width: 690px){
+    .container{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .header-navbar-toggle{
+        display: flex;
+        z-index: 1000;
+    }
+    .header-navbar-menu{
+        transform: translateY(-100%);
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background: rgb(44, 243, 71);
+        top: 0;
+        left: 0;
+    }
+    .header-navbar-menuLink{
+       margin: 20px;
+       font-size: 24px; 
+    }
+    .header-sloganSlogan{
+        margin-top: 5px;
+        font-size: 50px;
+    }
+}
