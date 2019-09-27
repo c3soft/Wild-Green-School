@@ -4,6 +4,7 @@
 body, html{
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 .container{
     width: 90%;
@@ -75,11 +76,12 @@ body, html{
     height: 60px;
     display: flex;
     text-align: center;
+    align-items: center;
     display: none;
     cursor: pointer;
 
 }
-.header-navbar-toggleIcon, .header-navbar-toggleIcon:before, .header-navbar-toggleIcon:after{
+.header-navbar-toggleIcon, .header-navbar-toggleIcon::before, .header-navbar-toggleIcon::after{
     content: "";
     display: block;
     width: 100%;
@@ -88,30 +90,39 @@ body, html{
     background: #edf5fc;
     position: relative;
 }
-.header-navbar-toggleIcon:before{top: 10px;}
-.header-navbar-toggleIcon:after{top: -14px;}
+.header-navbar-toggleIcon::before{top: 10px;}
+.header-navbar-toggleIcon::after{top: -14px;}
+
+/* Burger croix */
+
+
 
 @media screen and (max-width: 690px){
     .container{
         width: 100%;
         padding: 0 20px;
     }
+
     .header-navbar-toggle{
         display: flex;
         z-index: 1000;
     }
     .header-navbar-menu{
-        transform: translateY(-100%);
+        position: absolute;
+        top: 0px;
+        left: -400px;
         display: flex;
         flex-direction: column;
         justify-items: center;
-        align-items: center;
-        position: absolute;
-        width: 100vw;
+        align-items: flex-start;
+        width: 60vw;
         height: 100vh;
-        background: rgb(44, 243, 71);
-        top: 0;
-        left: 0;
+        background: rgba(240, 248, 255, .9);
+    }
+    .header-navbar-menu a{
+        margin-top: 30px;
+        color:#222;
+
     }
     .header-navbar-menuLink{
        margin: 20px;
