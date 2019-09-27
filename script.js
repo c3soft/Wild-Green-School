@@ -7,7 +7,7 @@ clicHamburger.addEventListener('click', () => {
 
     
 });
-//About
+// About
 const clickAbout = document.getElementById('about');
 clickAbout.addEventListener('click', () => {
     alert('aa');
