@@ -1,20 +1,30 @@
 // Move menu
+let stateMenuBurger = false;
 const clicHamburger = document.getElementById('clickHamburger');
 const moveMenu = document.getElementById('moveMenu');
 clicHamburger.addEventListener('click', () => {
-    moveMenu.style.transition = "0.5s";
-    moveMenu.style.left = "0";
+    if(stateMenuBurger){
+        moveMenu.style.transition = "0.5s";
+        moveMenu.style.left = "-400px";
+        stateMenuBurger = false;
+    }else{
+        moveMenu.style.transition = "0.5s";
+        moveMenu.style.left = "0";
+        stateMenuBurger = true;
+    }
 });
 
 //close choose menu
 function paramCloseMenu(){
-    moveMenu.style.left = "-400px";
     moveMenu.style.transition = "0.5s";
+    moveMenu.style.left = "-400px";
+    stateMenuBurger = false;
 };
 const clickCloseMenuGesture = document.getElementById('menuGesture');
 const clickCloseMenucontact = document.getElementById('menucontact');
 const clickCloseMenuSuggestion = document.getElementById('menuSuggestion');
 const clickCloseMenuAbout = document.getElementById('menuAbout');
+
 clickCloseMenuGesture.addEventListener('click', () => { //close menu gesture
     paramCloseMenu();
 });

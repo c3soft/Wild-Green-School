@@ -95,6 +95,11 @@ body, html{
 .header-navbar-toggleIcon::before{top: 10px;}
 .header-navbar-toggleIcon::after{top: -14px;}
 
+/* .closeMenuBurger{
+    transition: 0.5s;
+    left: -400px;
+} */
+
 /* Assess */
 .assess{
     display: flex;
