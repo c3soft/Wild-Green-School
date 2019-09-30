@@ -28,12 +28,14 @@
                 </div>
                 <!-- menu -->
                 <div class="header-navbar-menu" id="moveMenu">
-                    <!-- <a href="#goodGestures" class="header-navbar-menuLink" id="menuGesture" onclick="hamburger_click(false)"><i class="fas fa-hand-peace"></i> Bons 
-                        gestes</a>-->
-                    <a href="#goodGestures" class="header-navbar-menuLink" id="menuGesture"><i class="fas fa-hand-peace"></i> Bons gestes</a>
-                    <a href="#whoContact" class="header-navbar-menuLink" id="menucontact"><i class="fas fa-id-badge"></i> Qui contacter</a>
-                    <a href="#propositions" class="header-navbar-menuLink" id="menuSuggestion"><i class="fas fa-lightbulb"></i>Suggestions</a>
-                    <a href="#" class="header-navbar-menuLink" id="menuAbout"><i class="fab fa-vaadin"></i> A propos de...</a>
+                    <a href="#goodGestures" class="header-navbar-menuLink" id="menuGesture"><i
+                            class="fas fa-hand-peace"></i> Bons gestes</a>
+                    <a href="#whoContact" class="header-navbar-menuLink" id="menucontact"><i
+                            class="fas fa-id-badge"></i> Qui contacter</a>
+                    <a href="#propositions" class="header-navbar-menuLink" id="menuSuggestion"><i
+                            class="fas fa-lightbulb"></i> Suggestions</a>
+                    <a href="#" class="header-navbar-menuLink" id="menuAbout"><i class="fab fa-vaadin"></i> A propos
+                        de...</a>
                 </div>
                 <!-- Burger -->
                 <div class="header-navbar-toggle">
@@ -51,30 +53,36 @@
     </div>
     <!-- assess -->
     <section class="assess" id="assess">
-        <h2>Evalue ton école !</h2>
+
+        <div class="headerAssess">
+            <h2>Evalue ton école !</h2>
+            <div id="message"></div>
+            <span title="Fermer"><i class="fas fa-times"></i></span>
+        </div>
+
         <div class="question">
             <div class="sentenseQuestion">
-                <h3>Adoptez-vous le système de tri sélectif ?</h3>
+                <h3 class="sentenseQuestionChange" id="sentenseQuestionChange">Adoptez-vous le système de tri sélectif ?</h3>
             </div>
-            <div class="note">
-                <span><i class="fas fa-leaf"></i></span>
-                <span><i class="fas fa-leaf"></i></span>
-                <span><i class="fas fa-leaf"></i></span>
-                <span><i class="fas fa-leaf"></i></span>
-                <span><i class="fas fa-leaf"></i></span>
-            </div>
-            <button>Ok</button>
-            <span>X</span>
+            <div class="note" id="note">
+                    <span><i class="fas fa-leaf" id = "choise1"></i></span>
+                    <span><i class="fas fa-leaf" id = "choise2"></i></span>
+                    <span><i class="fas fa-leaf" id = "choise3"></i></span>
+                    <span><i class="fas fa-leaf" id = "choise4"></i></span>
+                    <span><i class="fas fa-leaf" id = "choise5"></i></span>
+                </div>
+            <button class="btnNext" id="btnNext">Suivant</button>
+            <div class="points" id="points"></div>
         </div>
     </section>
     <!-- About -->
     <section class="aboutOf" id="aboutOf">
         <h2>Wild Green School</h2>
         <h5>Devlopped by:</h5>
-        <p>François Hanesse</p> 
-        <p>Pablo Martin-Onetti</p> 
-        <p>Pascal Jurion</p> 
-        <h5>Version: V01.2</h5> 
+        <p>François Hanesse</p>
+        <p>Pablo Martin-Onetti</p>
+        <p>Pascal Jurion</p>
+        <h5>Version: V01.2</h5>
     </section>
     <main>
         <!-- Main text -->

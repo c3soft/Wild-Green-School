@@ -3,11 +3,11 @@ let stateMenuBurger = false;
 const clicHamburger = document.getElementById('clickHamburger');
 const moveMenu = document.getElementById('moveMenu');
 clicHamburger.addEventListener('click', () => {
-    if(stateMenuBurger){
+    if (stateMenuBurger) {
         moveMenu.style.transition = "0.5s";
         moveMenu.style.left = "-400px";
         stateMenuBurger = false;
-    }else{
+    } else {
         moveMenu.style.transition = "0.5s";
         moveMenu.style.left = "0";
         stateMenuBurger = true;
@@ -15,7 +15,7 @@ clicHamburger.addEventListener('click', () => {
 });
 
 //close choose menu
-function paramCloseMenu(){
+function paramCloseMenu() {
     moveMenu.style.transition = "0.5s";
     moveMenu.style.left = "-400px";
     stateMenuBurger = false;
@@ -63,32 +63,149 @@ clickAssess.addEventListener('click', () => {
 
 });
 
-//Close modal
-window.onclick = function () {
-    setTimeout(function () {
-        if (openAbout.style.zIndex == 3000) {
-            openAbout.style.zIndex = "-2";
-            openAbout.style.display = "none";
-        }
-    }, 3000)
-};
+////////////////////////////////////////////////////////////////////////////////////
+const arrayCountEvalSimple = [];
+const arrayQuestion =['Votre école est équipée de d\'ampoule basse consommation ?',
+                    'Vous priviliger les échanges électroniques aux papiers (imprimante)',
+                    'Merci Pour votre participation !!!'];
+
+// const clickClose = document.getElementById('btnNext')
+// const showMessage = document.getElementById('message');
 
 
+// Color mouse move items
+const choice1 = document.getElementById('choise1');
+const choice2 = document.getElementById('choise2');
+const choice3 = document.getElementById('choise3');
+const choice4 = document.getElementById('choise4');
+const choice5 = document.getElementById('choise5');
+const choishowNote = document.getElementById('note');
+const nextChoise = document.getElementById('btnNext');
+const showPoints = document.getElementById('points');
+const changeQuestion = document.getElementById('sentenseQuestionChange');
 
+// reset choice
+ function resetChoise() {
+    choice1.style.color = '#8c8d8a';
+    choice2.style.color = '#8c8d8a';
+    choice3.style.color = '#8c8d8a';
+    choice4.style.color = '#8c8d8a';
+    choice5.style.color = '#8c8d8a';
+}
+//move 1
+choice1.addEventListener('mouseenter', () => {
+    choice1.style.color = 'green';
+    choice2.style.color = '#8c8d8a';
+    choice3.style.color = '#8c8d8a';
+    choice4.style.color = '#8c8d8a';
+    choice5.style.color = '#8c8d8a';
+})
 
-function hamburger_click(open)
-{
-    // var hamburgerElement = document.getElementById("hamburger");
-    // var menuElement = document.getElementById("menu");
+// move 2
+choice2.addEventListener('mousemove', () => {
+    choice2.style.color = 'green';
+    choice1.style.color = 'green';
+    choice3.style.color = '#8c8d8a';
+    choice4.style.color = '#8c8d8a';
+    choice5.style.color = '#8c8d8a';
+})
 
-    if (open) {
-        // hamburgerElement.style.display = "none";
-        moveMenu.style.transition = "0.5s";
-        moveMenu.style.left = "-400";
-    } else {
-        // hamburgerElement.style.display = "block";
-        // moveMenu.style.display = "none";
-        // moveMenu.style.transition = "0.5s";
-        moveMenu.style.left = "-400px";
+// move 3
+choice3.addEventListener('mousemove', () => {
+    choice3.style.color = 'green';
+    choice1.style.color = 'green';
+    choice2.style.color = '#green';
+    choice4.style.color = '#8c8d8a';
+    choice5.style.color = '#8c8d8a';
+})
+
+// move 4
+choice4.addEventListener('mousemove', () => {
+    choice4.style.color = 'green';
+    choice1.style.color = 'green';
+    choice2.style.color = 'green';
+    choice3.style.color = 'green';
+    choice5.style.color = '#8c8d8a';
+})
+
+// move 5
+choice5.addEventListener('mousemove', () => {
+    choice5.style.color = 'green';
+    choice1.style.color = 'green';
+    choice2.style.color = 'green';
+    choice3.style.color = 'green';
+    choice4.style.color = 'green';
+})
+
+//click items
+choice1.addEventListener('click', () => {
+        arrayCountEvalSimple[arrayCountEvalSimple.length] = 1
+    let sum = 0;
+    for (let i = 0; i < arrayCountEvalSimple.length; i++) {
+        sum += arrayCountEvalSimple[i]
+        showPoints.innerHTML = sum + ' Pts';
+        changeQuestion.innerHTML = arrayQuestion[i];
+    resetChoise();
     }
-};
+    if(arrayCountEvalSimple.length === 3){
+        choishowNote.style.display = 'none';
+    }
+})
+
+choice2.addEventListener('click', ()=>{
+    arrayCountEvalSimple[arrayCountEvalSimple.length] = 2
+    let sum = 0;
+    for (let i = 0; i < arrayCountEvalSimple.length; i++) {
+        sum += arrayCountEvalSimple[i]
+        showPoints.innerHTML = sum + ' Pts';
+        changeQuestion.innerHTML = arrayQuestion[i];
+    resetChoise();
+    }
+    if(arrayCountEvalSimple.length === 3){
+        choishowNote.style.display = 'none';
+    }
+})
+
+choice3.addEventListener('click', ()=>{
+    arrayCountEvalSimple[arrayCountEvalSimple.length] = 3
+    let sum = 0;
+    for (let i = 0; i < arrayCountEvalSimple.length; i++) {
+        sum += arrayCountEvalSimple[i]
+        showPoints.innerHTML = sum + ' Pts';
+        changeQuestion.innerHTML = arrayQuestion[i];
+    resetChoise();
+    }
+    if(arrayCountEvalSimple.length === 3){
+        choishowNote.style.display = 'none';
+    }
+})
+
+choice4.addEventListener('click', ()=>{
+    arrayCountEvalSimple[arrayCountEvalSimple.length] = 4
+    let sum = 0;
+    for (let i = 0; i < arrayCountEvalSimple.length; i++) {
+        sum += arrayCountEvalSimple[i]
+        showPoints.innerHTML = sum + ' Pts';
+        changeQuestion.innerHTML = arrayQuestion[i];
+    resetChoise();
+    }
+    if(arrayCountEvalSimple.length === 3){
+        choishowNote.style.display = 'none';
+    }
+})
+
+choice5.addEventListener('click', ()=>{
+    arrayCountEvalSimple[arrayCountEvalSimple.length] = 5
+    let sum = 0;
+    for (let i = 0; i < arrayCountEvalSimple.length; i++) {
+        sum += arrayCountEvalSimple[i]
+        showPoints.innerHTML = sum + ' Pts';
+        changeQuestion.innerHTML = arrayQuestion[i];
+    resetChoise();
+    }
+    if(arrayCountEvalSimple.length === 3){
+        choishowNote.style.display = 'none';
+    }
+})
+
+////////////////////////////////////////////////////////////////////////////////////

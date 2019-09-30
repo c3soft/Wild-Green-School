@@ -7,6 +7,7 @@ body, html{
     scroll-behavior: smooth;
     background-color: rgba(240, 239, 239, 0.4);
 }
+/* HEADER */
 .container{
     width: 90%;
     margin: auto;
@@ -95,12 +96,9 @@ body, html{
 .header-navbar-toggleIcon::before{top: 10px;}
 .header-navbar-toggleIcon::after{top: -14px;}
 
-/* .closeMenuBurger{
-    transition: 0.5s;
-    left: -400px;
-} */
 
-/* Assess */
+
+/* ASSESS */
 .assess{
     display: flex;
     flex-direction: column;
@@ -110,11 +108,18 @@ body, html{
     padding-left: 20px;
     position: fixed;
     z-index: -1;
-    margin-top: 80px;
+    margin-top: 40px;
     left: 0;
     /* top: 300px; */
     border-radius: 9px;
     opacity: 0;
+}
+
+.headerAssess{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 .sentenseQuestion{
     margin-right: 7px;
@@ -131,13 +136,29 @@ i.fas.fa-leaf{
     margin: 0 7px;
     color: #8c8d8a;
     cursor: pointer;
+} 
+span{
+    align-self: flex-start;
+    margin: 7px 7px;
+    cursor: pointer;
 }
-.question button{
-    margin-left: 20px;
+span i{
+    color: red;
+}
+.btnNext{
+    margin-left: 10px;
     background-color: #78e078;
     border-radius: 50%;
+    display: none;
 }
-/* Aboub of */
+.points{
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* ABOUT OF */
 .aboutOf{
     position: fixed;
     top: 10px;
