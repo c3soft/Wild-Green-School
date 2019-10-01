@@ -65,14 +65,12 @@ clickAssess.addEventListener('click', () => {
 
 ////////////////////////////////////////////////////////////////////////////////////
 const arrayCountEvalSimple = [];
-const arrayQuestion =['Votre école est équipée de d\'ampoule basse consommation ?',
+const arrayQuestion =['Votre école est équipée de d\'ampoules basse consommation ?',
                     'Vous priviliger les échanges électroniques aux papiers (imprimante)',
-                    'Merci Pour votre participation !!!'];
+                    'Fin du questionnaire !!!'];
 
-// const clickClose = document.getElementById('btnNext')
-// const showMessage = document.getElementById('message');
-
-
+                    
+                    
 // Color mouse move items
 const choice1 = document.getElementById('choise1');
 const choice2 = document.getElementById('choise2');
@@ -83,8 +81,10 @@ const choishowNote = document.getElementById('note');
 const nextChoise = document.getElementById('btnNext');
 const showPoints = document.getElementById('points');
 const changeQuestion = document.getElementById('sentenseQuestionChange');
+const clickCloseAssess = document.getElementById('closeAssess')
+const showMessage = document.getElementById('message');
 
-// reset choice
+// Function reset choice
  function resetChoise() {
     choice1.style.color = '#8c8d8a';
     choice2.style.color = '#8c8d8a';
@@ -137,7 +137,7 @@ choice5.addEventListener('mousemove', () => {
     choice4.style.color = 'green';
 })
 
-//click items
+//click items choises
 choice1.addEventListener('click', () => {
         arrayCountEvalSimple[arrayCountEvalSimple.length] = 1
     let sum = 0;
@@ -149,6 +149,7 @@ choice1.addEventListener('click', () => {
     }
     if(arrayCountEvalSimple.length === 3){
         choishowNote.style.display = 'none';
+        showMessage.innerHTML="Merci Pour votre participation !!!";
     }
 })
 
@@ -208,4 +209,11 @@ choice5.addEventListener('click', ()=>{
     }
 })
 
+clickCloseAssess.addEventListener('click',()=>{
+    document.body.style.background = '#f9f9f9';
+    colorHeaderMask.style.fill = '#f9f9f9';
+    moveQuestionAssess.style.zIndex = "-1";
+    moveQuestionAssess.style.opacity = 0;
+    moveQuestionAssess.style.transition = '1s';
+})
 ////////////////////////////////////////////////////////////////////////////////////
