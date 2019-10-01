@@ -4,6 +4,7 @@
 body, html{
     margin: 0;
     padding: 0;
+
 }
 .container{
     width: 90%;
@@ -122,3 +123,46 @@ body, html{
         font-size: 50px;
     }
 }
+/* partie Pablo*/
+.ensemble{
+    display: inline-block;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 90%;
+    align-items: center;
+    margin-left: 4rem;
+    font-family: 'Saira Stencil One', cursive;
+    background-color: #FCF9F8;
+    color: #A0AC92
+}
+p{
+    text-align: justify;
+    width: 90%;
+
+}
+
+.separateur{
+    height: 7rem;
+    width: 50rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.aside{
+    border-left: 1px solid black;
+    width: 29%;
+    height: 460rem;
+    float: right;
+    margin-right: 0rem;
+    margin-left: 2rem;
+    padding-left: 1rem;
+}
+.intro{
+    width: 100%;
+}
+
+.asideImage{
+    width:100%;
+}
+/* partie Pablo*/
