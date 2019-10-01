@@ -1,3 +1,5 @@
+//////////////////////////////////// MENU RESPONSIVE ////////////////////////////////////////////////
+
 // Move menu
 let stateMenuBurger = false;
 const clicHamburger = document.getElementById('clickHamburger');
@@ -38,6 +40,8 @@ clickCloseMenuAbout.addEventListener('click', () => { //close menu about
     paramCloseMenu();
 });
 
+//////////////////////////////////// ABOUT OF ////////////////////////////////////////////////
+
 // Open about
 const clickAbout = document.getElementById('menuAbout');
 const openAbout = document.getElementById('aboutOf');
@@ -48,6 +52,16 @@ clickAbout.addEventListener('click', () => {
     openAbout.style.zIndex = "3000";
 
 });
+//Close About Tempo
+window.onclick = function () {
+    setTimeout(function () {
+        if (openAbout.style.zIndex == 3000) {
+            openAbout.style.zIndex = "-2";
+            openAbout.style.display = "none";
+        }
+    }, 3000)
+};
+//////////////////////////////////// VALIDATION ////////////////////////////////////////////////
 
 //Assess
 const moveQuestionAssess = document.getElementById('assess');
@@ -63,15 +77,13 @@ clickAssess.addEventListener('click', () => {
 
 });
 
-////////////////////////////////////////////////////////////////////////////////////
+//Arrays validation
 const arrayCountEvalSimple = [];
 const arrayQuestion =['Votre école est équipée de d\'ampoules basse consommation ?',
                     'Vous priviliger les échanges électroniques aux papiers (imprimante)',
                     'Fin du questionnaire !!!'];
-
-                    
-                    
-// Color mouse move items
+                   
+// Variables
 const choice1 = document.getElementById('choise1');
 const choice2 = document.getElementById('choise2');
 const choice3 = document.getElementById('choise3');
@@ -114,7 +126,7 @@ choice2.addEventListener('mousemove', () => {
 choice3.addEventListener('mousemove', () => {
     choice3.style.color = 'green';
     choice1.style.color = 'green';
-    choice2.style.color = '#green';
+    choice2.style.color = 'green';
     choice4.style.color = '#8c8d8a';
     choice5.style.color = '#8c8d8a';
 })
@@ -164,6 +176,7 @@ choice2.addEventListener('click', ()=>{
     }
     if(arrayCountEvalSimple.length === 3){
         choishowNote.style.display = 'none';
+        showMessage.innerHTML="Merci Pour votre participation !!!";
     }
 })
 
@@ -178,6 +191,7 @@ choice3.addEventListener('click', ()=>{
     }
     if(arrayCountEvalSimple.length === 3){
         choishowNote.style.display = 'none';
+        showMessage.innerHTML="Merci Pour votre participation !!!";
     }
 })
 
@@ -192,6 +206,7 @@ choice4.addEventListener('click', ()=>{
     }
     if(arrayCountEvalSimple.length === 3){
         choishowNote.style.display = 'none';
+        showMessage.innerHTML="Merci Pour votre participation !!!";
     }
 })
 
@@ -206,9 +221,10 @@ choice5.addEventListener('click', ()=>{
     }
     if(arrayCountEvalSimple.length === 3){
         choishowNote.style.display = 'none';
+        showMessage.innerHTML="Merci Pour votre participation !!!";
     }
 })
-
+// close modal validation
 clickCloseAssess.addEventListener('click',()=>{
     document.body.style.background = '#f9f9f9';
     colorHeaderMask.style.fill = '#f9f9f9';
@@ -216,4 +232,5 @@ clickCloseAssess.addEventListener('click',()=>{
     moveQuestionAssess.style.opacity = 0;
     moveQuestionAssess.style.transition = '1s';
 })
+
 ////////////////////////////////////////////////////////////////////////////////////
