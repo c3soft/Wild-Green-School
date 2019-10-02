@@ -190,7 +190,7 @@ span i{
 
 
 /* partie Pablo*/
-.ensemble{
+ .ensemble{
     display: inline-block;
     flex-direction: column;
     text-align: center;
@@ -199,7 +199,7 @@ span i{
     align-items: center;
     margin-left: 4rem;
     font-family: 'Saira Stencil One', cursive;
-    background-color: #FCF9F8;
+    /* background-color: #FCF9F8; */
     color: #A0AC92
 }
 p{
@@ -230,7 +230,7 @@ p{
 
 .asideImage{
     width:100%;
-}
+} 
 /* partie Pablo*/
 /* //////////////////////////////////////PARTIE FRANCOIS//////////////////////////////////////////////////////////// */
 

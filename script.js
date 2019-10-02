@@ -226,6 +226,7 @@ choice5.addEventListener('click', ()=>{
 })
 // close modal validation
 clickCloseAssess.addEventListener('click',()=>{
+    resetChoise();
     document.body.style.background = '#f9f9f9';
     colorHeaderMask.style.fill = '#f9f9f9';
     moveQuestionAssess.style.zIndex = "-1";
