@@ -2,7 +2,7 @@
 <html lang="fr">
 
 <head>
-    <title>Mon site</title>
+    <title>Wild Green School</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap" rel="stylesheet">
@@ -22,27 +22,69 @@
         <div class="container">
             <div class="header-navbar">
                 <div class="header-navbar-logo">
+                    <!-- Title -->
                     <h1 class="header-navbar-logoTitle">Wild Green School</h1>
                 </div>
-
-                <div class="header-navbar-menu">
-                    <a href="" class="header-navbar-menuLink"><i class="fas fa-paw"></i> Accueil</a>
-                    <a href="" class="header-navbar-menuLink"><i class="fas fa-industry"></i> Articles</a>
-                    <a href="" class="header-navbar-menuLink"><i class="fas fa-bicycle"></i> Contact</a>
+                <!-- menu -->
+                <div class="header-navbar-menu" id="moveMenu">
+                    <a href="#goodGestures" class="header-navbar-menuLink" id="menuGesture"><i
+                            class="fas fa-hand-peace"></i> Bons gestes</a>
+                    <a href="#whoContact" class="header-navbar-menuLink" id="menucontact"><i
+                            class="fas fa-id-badge"></i> Qui contacter</a>
+                    <a href="#propositions" class="header-navbar-menuLink" id="menuSuggestion"><i
+                            class="fas fa-lightbulb"></i> Suggestions</a>
+                    <a href="#" class="header-navbar-menuLink" id="menuAbout"><i class="fab fa-vaadin"></i> A propos
+                        de...</a>
                 </div>
+                <!-- Burger -->
                 <div class="header-navbar-toggle">
-                    <span class="header-navbar-toggleIcon"></span>
+                    <span class="header-navbar-toggleIcon" id="clickHamburger"></span>
+                    <!-- <i class="fas fa-bars"></i> -->
+                    <!-- <i class="fas fa-times"></i> -->
                 </div>
             </div>
-
+            <!-- slogan -->
             <div class="header-slogan">
                 <h1 class="header-sloganSlogan">Une expérience unique</h1>
-                <a class="header-sloganBtn" href="">Contactez-nois</a>
+                <a class="header-sloganBtn" id="assessBtn" href="#">Evalue ton école</a>
             </div>
         </div>
     </div>
+     <!-- assess -->
+     <section class="assess" id="assess">
 
-    <!-- Main text -->
+            <div class="headerAssess">
+                <h2>Evalue ton école !</h2>
+                <div class ="message" id="message"></div>
+                <span title="Quitter l'évaluation"><i class="fas fa-times" id="closeAssess"></i></span>
+            </div>
+    
+            <div class="question">
+                <div class="sentenseQuestion">
+                    <h3 class="sentenseQuestionChange" id="sentenseQuestionChange">Adoptez-vous le système de tri sélectif ?</h3>
+                </div>
+                <div class="note" id="note">
+                        <span><i class="fas fa-leaf" id = "choise1"></i></span>
+                        <span><i class="fas fa-leaf" id = "choise2"></i></span>
+                        <span><i class="fas fa-leaf" id = "choise3"></i></span>
+                        <span><i class="fas fa-leaf" id = "choise4"></i></span>
+                        <span><i class="fas fa-leaf" id = "choise5"></i></span>
+                    </div>
+                <button class="btnNext" id="btnNext">Suivant</button>
+                <div class="points" id="points"></div>
+            </div>
+        </section>
+        <!-- About -->
+        <section class="aboutOf" id="aboutOf">
+            <h2>Wild Green School</h2>
+            <h5>Devlopped by:</h5>
+            <p>François Hanesse</p>
+            <p>Pablo Martin-Onetti</p>
+            <p>Pascal Jurion</p>
+            <h5>Version: V01.2</h5>
+        </section>
+        <main>
+            <!-- Main text -->
 <section class="ensemble">
     <section class="intro">
         <h2>Parce que demain est aujourd'hui</h2>
@@ -95,7 +137,7 @@
         
     </section>
 
-    <section class="goodGestures">
+    <section class="goodGestures" id="goodGestures">
             <img class ="separateur" src="images/separateur.jpg" alt="separateur" />
         <h2>Les bons gestes à adopter...</h2>
         <article>
@@ -320,13 +362,13 @@
     </section>
 </section>
     <!-- fin de partie Pablo -->
-    <section class="whoContact">
+    <section class="whoContact" id="whoContact">
         <h2>Vers qui se renseigner</h2>
         <article>
 
         </article>
     </section>
-    <section class="propositions">
+    <section class="propositions" id="propositions">
         <h3>Suggéerer une amélioration !</h3>
         <form action="#">
 

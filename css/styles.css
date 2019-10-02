@@ -5,7 +5,11 @@ body, html{
     margin: 0;
     padding: 0;
 
+    scroll-behavior: smooth;
+    /* background-color: rgba(240, 239, 239, 0.4); */
+
 }
+/* HEADER */
 .container{
     width: 90%;
     margin: auto;
@@ -65,10 +69,11 @@ body, html{
     font-family: 'Anton', sans-serif;
 }
 .header-sloganBtn{
-    color: #edf5fc;
+    color: #12582d;
+    font-weight: bold;
     text-decoration: none;
     padding: 15px 20px;
-    background: rgb(120, 224, 120);
+    background: #78e078;
     border-radius: 5px;
 }
 .header-navbar-toggle{
@@ -76,11 +81,12 @@ body, html{
     height: 60px;
     display: flex;
     text-align: center;
+    align-items: center;
     display: none;
     cursor: pointer;
 
 }
-.header-navbar-toggleIcon, .header-navbar-toggleIcon:before, .header-navbar-toggleIcon:after{
+.header-navbar-toggleIcon, .header-navbar-toggleIcon::before, .header-navbar-toggleIcon::after{
     content: "";
     display: block;
     width: 100%;
@@ -89,40 +95,100 @@ body, html{
     background: #edf5fc;
     position: relative;
 }
-.header-navbar-toggleIcon:before{top: 10px;}
-.header-navbar-toggleIcon:after{top: -14px;}
+.header-navbar-toggleIcon::before{top: 10px;}
+.header-navbar-toggleIcon::after{top: -14px;}
 
-@media screen and (max-width: 690px){
-    .container{
-        width: 100%;
-        padding: 0 20px;
-    }
-    .header-navbar-toggle{
-        display: flex;
-        z-index: 1000;
-    }
-    .header-navbar-menu{
-        transform: translateY(-100%);
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
-        align-items: center;
-        position: absolute;
-        width: 100vw;
-        height: 100vh;
-        background: rgb(44, 243, 71);
-        top: 0;
-        left: 0;
-    }
-    .header-navbar-menuLink{
-       margin: 20px;
-       font-size: 24px; 
-    }
-    .header-sloganSlogan{
-        margin-top: 5px;
-        font-size: 50px;
-    }
+
+
+/* ASSESS */
+.assess{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15%;
+    background-color: #ebf5c6;
+    width: 70%; 
+    padding-left: 20px;
+    position: fixed;
+    z-index: -1;
+    margin-top: 40px;
+    left: 0;
+    /* top: 300px; */
+    border-radius: 9px;
+    opacity: 0;
 }
+
+.headerAssess{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.sentenseQuestion{
+    margin-right: 7px;
+    color: #3f3f3e;
+}
+.question{
+    display: flex;
+    align-items: center;
+}
+.note{
+    display: flex;
+}
+i.fas.fa-leaf{
+    margin: 0 7px;
+    color: #8c8d8a;
+    cursor: pointer;
+} 
+span{
+    align-self: flex-start;
+    margin: 7px 7px;
+    cursor: pointer;
+}
+span i{
+    color: red;
+}
+.btnNext{
+    margin-left: 10px;
+    background-color: #78e078;
+    border-radius: 50%;
+    display: none;
+}
+.points{
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.message{
+    color: #12582d;
+    font-size: 24px;
+    font-family: 'Anton', sans-serif;
+}
+/* ABOUT OF */
+.aboutOf{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: -10;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    background: #d4dfaf;
+    border: 1px solid #3f3f3e;
+    box-shadow: 10px 10px 15px -2px rgba(0,0,0,0.75);
+    display: none;
+}
+.aboutOf h2, h5{
+    margin: 5px 5px;
+}
+.aboutOf h2{
+    font-size: 18px;
+}
+.aboutOf p{
+    margin: 0 5px;
+}
+
+
 /* partie Pablo*/
 .ensemble{
     display: inline-block;
@@ -166,3 +232,44 @@ p{
     width:100%;
 }
 /* partie Pablo*/
+/* //////////////////////////////////////PARTIE FRANCOIS//////////////////////////////////////////////////////////// */
+
+
+
+/* ///////////////////////////////////FIN PARTIE FRANCOIS//////////////////////////////////////////////////////////// */
+@media screen and (max-width: 690px){
+    .container{
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .header-navbar-toggle{
+        display: flex;
+        z-index: 1000;
+    }
+    .header-navbar-menu{
+        position: absolute;
+        top: 0px;
+        left: -400px;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: flex-start;
+        width: 60vw;
+        height: 100vh;
+        background: rgba(240, 248, 255, .9);
+    }
+    .header-navbar-menu a{
+        margin-top: 30px;
+        color:#222;
+
+    }
+    .header-navbar-menuLink{
+       margin: 20px;
+       font-size: 24px; 
+    }
+    .header-sloganSlogan{
+        margin-top: 5px;
+        font-size: 50px;
+    }
+}
