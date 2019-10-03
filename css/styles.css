@@ -227,6 +227,9 @@ p{
 .intro{
     width: 100%;
 }
+.intro p{
+    width: 100%;
+}
 
 .asideImage{
     width:100%;
@@ -237,7 +240,7 @@ p{
 
 
 /* ///////////////////////////////////FIN PARTIE FRANCOIS//////////////////////////////////////////////////////////// */
-@media screen and (max-width: 690px){
+@media screen and (max-width: 360px){
     .container{
         width: 100%;
         padding: 0 20px;
@@ -271,5 +274,29 @@ p{
     .header-sloganSlogan{
         margin-top: 5px;
         font-size: 50px;
+    }
+/* pablo////////////////////////////////////////////////////////////////////////// */
+    .ensemble{
+        width: 90%;
+        margin-left: 2rem;
+    }
+    .aside{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        border-right: 1px solid black;
+        padding-right: 8px;
+        padding-left: 8px;
+        margin-left: 2rem;
+
+    }
+    .separateur{
+        
+        width:25rem;
+        margin-left:0;
+    }
+    .asideImage{
+        border-radius: 30%;
     }
 }
