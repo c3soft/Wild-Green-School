@@ -240,7 +240,7 @@ p{
 
 
 /* ///////////////////////////////////FIN PARTIE FRANCOIS//////////////////////////////////////////////////////////// */
-@media screen and (max-width: 360px){
+@media screen and (max-width: 690px){
     .container{
         width: 100%;
         padding: 0 20px;
@@ -278,7 +278,7 @@ p{
 /* pablo////////////////////////////////////////////////////////////////////////// */
     .ensemble{
         width: 90%;
-        margin-left: 2rem;
+        margin-left:auto;
     }
     .aside{
         display: flex;
@@ -287,16 +287,24 @@ p{
         height: auto;
         border-right: 1px solid black;
         padding-right: 8px;
-        padding-left: 8px;
-        margin-left: 2rem;
+        margin-left:10%;
+
 
     }
     .separateur{
         
-        width:25rem;
+        width:100%;
         margin-left:0;
     }
     .asideImage{
         border-radius: 30%;
     }
+    .intro{
+        margin-left:5%
+    }
+    .goodGestures{
+        margin-left:20%
+    }
+    
+
 }
